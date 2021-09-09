@@ -5,12 +5,14 @@
     {
       "tool": {
         "driver": {
+          "version": "1.0",
           "organization": "Lacework",
-          "name": "Vulnerability Scanner",
+          "name": "lacework-vuln-scanner",
+          "informationUri": "https://support.lacework.com/hc/en-us/articles/360035472393-Container-Vulnerability-Assessment-Overview",
           "rules": [
             {
               "id": "CVE-2007-6755",
-              "name": "CVE-2007-6755",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2007-6755",
               "shortDescription": {
                 "text": "CVE-2007-6755"
               },
@@ -33,7 +35,7 @@
             },
             {
               "id": "CVE-2010-0928",
-              "name": "CVE-2010-0928",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2010-0928",
               "shortDescription": {
                 "text": "CVE-2010-0928"
               },
@@ -56,7 +58,7 @@
             },
             {
               "id": "CVE-2016-10228",
-              "name": "CVE-2016-10228",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2016-10228",
               "shortDescription": {
                 "text": "CVE-2016-10228"
               },
@@ -79,7 +81,7 @@
             },
             {
               "id": "CVE-2021-3326",
-              "name": "CVE-2021-3326",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2021-3326",
               "shortDescription": {
                 "text": "CVE-2021-3326"
               },
@@ -102,7 +104,7 @@
             },
             {
               "id": "CVE-2020-1752",
-              "name": "CVE-2020-1752",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2020-1752",
               "shortDescription": {
                 "text": "CVE-2020-1752"
               },
@@ -125,7 +127,7 @@
             },
             {
               "id": "CVE-2019-19126",
-              "name": "CVE-2019-19126",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-19126",
               "shortDescription": {
                 "text": "CVE-2019-19126"
               },
@@ -148,7 +150,7 @@
             },
             {
               "id": "CVE-2019-1010024",
-              "name": "CVE-2019-1010024",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-1010024",
               "shortDescription": {
                 "text": "CVE-2019-1010024"
               },
@@ -171,7 +173,7 @@
             },
             {
               "id": "CVE-2010-4051",
-              "name": "CVE-2010-4051",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2010-4051",
               "shortDescription": {
                 "text": "CVE-2010-4051"
               },
@@ -194,7 +196,7 @@
             },
             {
               "id": "CVE-2019-25013",
-              "name": "CVE-2019-25013",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-25013",
               "shortDescription": {
                 "text": "CVE-2019-25013"
               },
@@ -217,7 +219,7 @@
             },
             {
               "id": "CVE-2021-27645",
-              "name": "CVE-2021-27645",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2021-27645",
               "shortDescription": {
                 "text": "CVE-2021-27645"
               },
@@ -240,7 +242,7 @@
             },
             {
               "id": "CVE-2020-6096",
-              "name": "CVE-2020-6096",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2020-6096",
               "shortDescription": {
                 "text": "CVE-2020-6096"
               },
@@ -263,7 +265,7 @@
             },
             {
               "id": "CVE-2010-4052",
-              "name": "CVE-2010-4052",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2010-4052",
               "shortDescription": {
                 "text": "CVE-2010-4052"
               },
@@ -286,7 +288,7 @@
             },
             {
               "id": "CVE-2018-20796",
-              "name": "CVE-2018-20796",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2018-20796",
               "shortDescription": {
                 "text": "CVE-2018-20796"
               },
@@ -309,7 +311,7 @@
             },
             {
               "id": "CVE-2020-10029",
-              "name": "CVE-2020-10029",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2020-10029",
               "shortDescription": {
                 "text": "CVE-2020-10029"
               },
@@ -332,7 +334,7 @@
             },
             {
               "id": "CVE-2021-35942",
-              "name": "CVE-2021-35942",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2021-35942",
               "shortDescription": {
                 "text": "CVE-2021-35942"
               },
@@ -355,7 +357,7 @@
             },
             {
               "id": "CVE-2020-1751",
-              "name": "CVE-2020-1751",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2020-1751",
               "shortDescription": {
                 "text": "CVE-2020-1751"
               },
@@ -378,7 +380,7 @@
             },
             {
               "id": "CVE-2020-27618",
-              "name": "CVE-2020-27618",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2020-27618",
               "shortDescription": {
                 "text": "CVE-2020-27618"
               },
@@ -401,7 +403,7 @@
             },
             {
               "id": "CVE-2010-4756",
-              "name": "CVE-2010-4756",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2010-4756",
               "shortDescription": {
                 "text": "CVE-2010-4756"
               },
@@ -424,7 +426,7 @@
             },
             {
               "id": "CVE-2019-1010025",
-              "name": "CVE-2019-1010025",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-1010025",
               "shortDescription": {
                 "text": "CVE-2019-1010025"
               },
@@ -447,7 +449,7 @@
             },
             {
               "id": "CVE-2019-1010023",
-              "name": "CVE-2019-1010023",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-1010023",
               "shortDescription": {
                 "text": "CVE-2019-1010023"
               },
@@ -470,7 +472,7 @@
             },
             {
               "id": "CVE-2021-33574",
-              "name": "CVE-2021-33574",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2021-33574",
               "shortDescription": {
                 "text": "CVE-2021-33574"
               },
@@ -493,7 +495,7 @@
             },
             {
               "id": "CVE-2019-9192",
-              "name": "CVE-2019-9192",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-9192",
               "shortDescription": {
                 "text": "CVE-2019-9192"
               },
@@ -516,7 +518,7 @@
             },
             {
               "id": "CVE-2019-1010022",
-              "name": "CVE-2019-1010022",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-1010022",
               "shortDescription": {
                 "text": "CVE-2019-1010022"
               },
@@ -539,7 +541,7 @@
             },
             {
               "id": "CVE-2019-15847",
-              "name": "CVE-2019-15847",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-15847",
               "shortDescription": {
                 "text": "CVE-2019-15847"
               },
@@ -562,7 +564,7 @@
             },
             {
               "id": "CVE-2018-12886",
-              "name": "CVE-2018-12886",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2018-12886",
               "shortDescription": {
                 "text": "CVE-2018-12886"
               },
@@ -585,7 +587,7 @@
             },
             {
               "id": "CVE-2019-19924",
-              "name": "CVE-2019-19924",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-19924",
               "shortDescription": {
                 "text": "CVE-2019-19924"
               },
@@ -608,7 +610,7 @@
             },
             {
               "id": "CVE-2019-19244",
-              "name": "CVE-2019-19244",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-19244",
               "shortDescription": {
                 "text": "CVE-2019-19244"
               },
@@ -631,7 +633,7 @@
             },
             {
               "id": "CVE-2020-11656",
-              "name": "CVE-2020-11656",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2020-11656",
               "shortDescription": {
                 "text": "CVE-2020-11656"
               },
@@ -654,7 +656,7 @@
             },
             {
               "id": "CVE-2019-19645",
-              "name": "CVE-2019-19645",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-19645",
               "shortDescription": {
                 "text": "CVE-2019-19645"
               },
@@ -677,7 +679,7 @@
             },
             {
               "id": "CVE-2019-19603",
-              "name": "CVE-2019-19603",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-19603",
               "shortDescription": {
                 "text": "CVE-2019-19603"
               },
@@ -700,7 +702,7 @@
             },
             {
               "id": "CVE-2020-13631",
-              "name": "CVE-2020-13631",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2020-13631",
               "shortDescription": {
                 "text": "CVE-2020-13631"
               },
@@ -723,7 +725,7 @@
             },
             {
               "id": "CVE-2017-17522",
-              "name": "CVE-2017-17522",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2017-17522",
               "shortDescription": {
                 "text": "CVE-2017-17522"
               },
@@ -746,7 +748,7 @@
             },
             {
               "id": "CVE-2021-23336",
-              "name": "CVE-2021-23336",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2021-23336",
               "shortDescription": {
                 "text": "CVE-2021-23336"
               },
@@ -769,7 +771,7 @@
             },
             {
               "id": "CVE-2021-3426",
-              "name": "CVE-2021-3426",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2021-3426",
               "shortDescription": {
                 "text": "CVE-2021-3426"
               },
@@ -792,7 +794,7 @@
             },
             {
               "id": "CVE-2019-9674",
-              "name": "CVE-2019-9674",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-9674",
               "shortDescription": {
                 "text": "CVE-2019-9674"
               },
@@ -815,7 +817,7 @@
             },
             {
               "id": "CVE-2019-18348",
-              "name": "CVE-2019-18348",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2019-18348",
               "shortDescription": {
                 "text": "CVE-2019-18348"
               },
@@ -838,7 +840,7 @@
             },
             {
               "id": "CVE-2020-27619",
-              "name": "CVE-2020-27619",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2020-27619",
               "shortDescription": {
                 "text": "CVE-2020-27619"
               },
@@ -861,7 +863,7 @@
             },
             {
               "id": "CVE-2013-0340",
-              "name": "CVE-2013-0340",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2013-0340",
               "shortDescription": {
                 "text": "CVE-2013-0340"
               },
@@ -884,7 +886,7 @@
             },
             {
               "id": "CVE-2021-37600",
-              "name": "CVE-2021-37600",
+              "helpUri": "https://security-tracker.debian.org/tracker/CVE-2021-37600",
               "shortDescription": {
                 "text": "CVE-2021-37600"
               },
@@ -916,7 +918,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2010-0928",
@@ -925,7 +941,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2016-10228",
@@ -934,7 +964,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2021-3326",
@@ -943,7 +987,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2020-1752",
@@ -952,7 +1010,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-19126",
@@ -961,7 +1033,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-1010024",
@@ -970,7 +1056,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2010-4051",
@@ -979,7 +1079,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-25013",
@@ -988,7 +1102,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2021-27645",
@@ -997,7 +1125,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2020-6096",
@@ -1006,7 +1148,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2010-4052",
@@ -1015,7 +1171,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2018-20796",
@@ -1024,7 +1194,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2020-10029",
@@ -1033,7 +1217,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2021-35942",
@@ -1042,7 +1240,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2020-1751",
@@ -1051,7 +1263,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2020-27618",
@@ -1060,7 +1286,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2010-4756",
@@ -1069,7 +1309,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-1010025",
@@ -1078,7 +1332,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-1010023",
@@ -1087,7 +1355,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2021-33574",
@@ -1096,7 +1378,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-9192",
@@ -1105,7 +1401,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-1010022",
@@ -1114,7 +1424,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:6e6aa873e5712572beef689c322bd408a314fa3f3317366645a7b117932ad172"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-15847",
@@ -1123,7 +1447,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:282a67c3d00eb9f41948eef9f534c83bba9962e96837f0d7cccc1b662f64f893"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2018-12886",
@@ -1132,7 +1470,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:282a67c3d00eb9f41948eef9f534c83bba9962e96837f0d7cccc1b662f64f893"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-19924",
@@ -1141,7 +1493,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-19244",
@@ -1150,7 +1516,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2020-11656",
@@ -1159,7 +1539,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-19645",
@@ -1168,7 +1562,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-19603",
@@ -1177,7 +1585,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2020-13631",
@@ -1186,7 +1608,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2017-17522",
@@ -1195,7 +1631,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2021-23336",
@@ -1204,7 +1654,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2021-3426",
@@ -1213,7 +1677,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-9674",
@@ -1222,7 +1700,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2019-18348",
@@ -1231,7 +1723,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2020-27619",
@@ -1240,7 +1746,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2013-0340",
@@ -1249,7 +1769,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         },
         {
           "ruleId": "CVE-2021-37600",
@@ -1258,7 +1792,21 @@
           },
           "fingerprints": {
             "layer_hash": "sha256:da973d0fc5638fba9cbb69c60e6192038ba4ce70c2ab8387426893ae1c094466"
-          }
+          },
+          "locations": [
+            {
+              "physicalLocation": {
+                "artifactLocation": {
+                  "uri": "Dockerfile"
+                },
+                "region": {
+                  "startLine": 1,
+                  "startColumn": 1,
+                  "endColumn": 2
+                }
+              }
+            }
+          ]
         }
       ]
     }

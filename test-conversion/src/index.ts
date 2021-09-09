@@ -18,7 +18,8 @@ const rules: ReportingDescriptor[] = []
 vulns.forEach(v => {
   rules.push({
     id: v.name,
-    name: v.name,
+    helpUri: v.link,
+    // name: v.name,
     shortDescription: {
       text: v.name,
     },
@@ -40,7 +41,21 @@ result.image.image_layers.forEach(l => {
         },
         fingerprints: {
           layer_hash: l.hash,
-        }
+        },
+        locations: [
+          {
+            physicalLocation: {
+              artifactLocation: {
+                uri: "Dockerfile"
+              },
+              region: {
+                startLine: 1,
+                startColumn: 1,
+                endColumn: 2
+              }
+            }
+          }
+        ]
       })
     })
   })
@@ -49,8 +64,10 @@ result.image.image_layers.forEach(l => {
 let report: Run = {
   tool: {
     driver: {
+      version: "1.0", // Needs populated properly
       organization: "Lacework",
-      name: "Vulnerability Scanner",
+      name: "lacework-vuln-scanner",
+      informationUri: "https://support.lacework.com/hc/en-us/articles/360035472393-Container-Vulnerability-Assessment-Overview",
       rules,
     },
   },
