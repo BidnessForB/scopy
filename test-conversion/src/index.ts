@@ -9,10 +9,11 @@ const buildRuleDescriptionMarkdown = (
   imgpackage: ImagePackage,
   v: ImagePackageVulnerability): string => {
   return `
-# ${v.name} found in package ${imgpackage.name}, image ${image.registry}/${image.repository}:${image.tags[0]}
+${v.name} found in package ${imgpackage.name}
 
 **Severity**: ${v.severity}
 **CVSSv3 Score**: ${v.metadata.NVD.CVSSv3.Score}
+**Image**:  ${image.registry}/${image.repository}:${image.tags[0]}
 **Image layer hash**: ${layer.hash}
 **Image creation command**: ${layer.created_by}
 **Package Name**: ${imgpackage.name}@${imgpackage.version}
@@ -52,7 +53,7 @@ result.image.image_layers.forEach(l => {
       results.push({
         ruleId: v.name,
         message: {
-          text: `${v.name} (${v.link})`,
+          text: `${v.name}`,
         },
         fingerprints: {
           layer_hash: l.hash,
