@@ -1,3 +1,6 @@
+#Mac shit
+.DS_Store
+
 #VSCode
 *.code-workspace
 
