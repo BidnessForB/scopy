@@ -10,13 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       security-events: write
-      contents: read
+      contents: write
     steps:
       # This step checks out a copy of your repository.
       - name: Checkout repository
         uses: actions/checkout@v2
-        with: 
-          token: ${{ secrets.SUPER_PAT }}
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
         with:
