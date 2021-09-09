@@ -13,7 +13,7 @@ ${v.name} found in package ${imgpackage.name}
 
 **Severity**: ${v.severity}
 **CVSSv3 Score**: ${v.metadata.NVD.CVSSv3.Score}
-**Image**:  ${image.registry}/${image.repository}:${image.tags[0]}
+**Image**: ${image.repository}:${image.tags[0]}
 **Image layer hash**: ${layer.hash}
 **Image creation command**: ${layer.created_by}
 **Package Name**: ${imgpackage.name}@${imgpackage.version}
