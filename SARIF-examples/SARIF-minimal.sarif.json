@@ -5,7 +5,7 @@
       {
         "tool": {
           "driver": {
-            "name": "Tool Name",
+            "name": "Minimal SARIF file",
             "informationUri":"https://www.foo.com",
             "rules": [
               {
