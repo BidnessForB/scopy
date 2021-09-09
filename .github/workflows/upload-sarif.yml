@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       security-events: write
-      content: read
+      contents: read
     steps:
       # This step checks out a copy of your repository.
       - name: Checkout repository
