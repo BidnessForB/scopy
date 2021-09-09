@@ -19,12 +19,21 @@ vulns.forEach(v => {
   rules.push({
     id: v.name,
     helpUri: v.link,
-    // name: v.name,
+    help: {
+      text: v.description,
+      markdown: `
+      # Overview
+      **Severity**: ${v.severity}
+      **Metadata**: ${v.metadata}
+
+      #### Description
+      ${v.description}
+
+      More details [here](${v.link}).
+      `
+    },
     shortDescription: {
       text: v.name,
-    },
-    fullDescription: {
-      text: v.description,
     },
     properties: {
         "security-severity": `${v.metadata.NVD.CVSSv3.Score}`,
