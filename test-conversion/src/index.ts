@@ -1,40 +1,54 @@
 // import { compileFromFile } from 'json-schema-to-typescript'
 import * as fs from 'fs';
 import { Run, ReportingDescriptor, Result } from "../typings/sarif-schema"
-import { ImagePackageVulnerability, ScanResult } from "./interfaces"
+import { ImageInfo, ImageLayer, ImagePackage, ImagePackageVulnerability, ScanResult } from "./interfaces"
 
-
-const result: ScanResult = JSON.parse(fs.readFileSync('outputs/example.json').toString())
-const vulns: ImagePackageVulnerability[] = []
-result.image.image_layers.forEach(l => {
-  l.packages.forEach(p => {
-    p.vulnerabilities.forEach(v => {
-      vulns.push(v)
-    })
-  })
-})
-
-const rules: ReportingDescriptor[] = []
-vulns.forEach(v => {
-  rules.push({
-    id: v.name,
-    helpUri: v.link,
-    help: {
-      text: v.description,
-      markdown: `**Severity**: ${v.severity}
+const buildRuleMarkdown = (v: ImagePackageVulnerability): string => {
+  return `
+**Severity**: ${v.severity}
 **CVSSv3 Score**: ${v.metadata.NVD.CVSSv3.Score}
 #### Description
 ${v.description}
 
 More details [here](${v.link}).`
-    },
-    shortDescription: {
-      text: v.name,
-    },
-    properties: {
-        "security-severity": `${v.metadata.NVD.CVSSv3.Score}`,
-        ...v.metadata.NVD,
-    },
+}
+
+const buildRuleDescriptionMarkdown = (
+  image: ImageInfo,
+  layer: ImageLayer,
+  imgpackage: ImagePackage,
+  v: ImagePackageVulnerability): string => {
+  return `
+# ${v.name} found in package ${imgpackage.name}, image ${image.registry}/${image.repository}:${image.tags[0]}
+
+**Image layer hash**: ${layer.hash}
+**Image creation command**: ${layer.created_by}
+**Package Name**: ${imgpackage.name}@${imgpackage.version}
+`
+}
+
+const result: ScanResult = JSON.parse(fs.readFileSync('outputs/example.json').toString())
+const rules: ReportingDescriptor[] = []
+result.image.image_layers.forEach(l => {
+  l.packages.forEach(p => {
+    p.vulnerabilities.forEach(v => {
+      rules.push({
+        id: v.name,
+        helpUri: v.link,
+        help: {
+          text: v.description,
+          markdown: buildRuleMarkdown(v)
+        },
+        shortDescription: {
+          text: v.name,
+          markdown: buildRuleDescriptionMarkdown(result.image.image_info, l, p, v)
+        },
+        properties: {
+          "security-severity": `${v.metadata.NVD.CVSSv3.Score}`,
+          ...v.metadata.NVD,
+        },
+      })
+    })
   })
 })
 
