@@ -27,7 +27,7 @@ vulns.forEach(v => {
       text: v.description,
     },
     properties: {
-        "security-severity": v.metadata.NVD.CVSSv3.Score,
+        "security-severity": `${v.metadata.NVD.CVSSv3.Score}`,
         ...v.metadata.NVD,
     },
   })
