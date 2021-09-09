@@ -34,6 +34,7 @@ More details [here](${v.link}).
 
 const result: ScanResult = JSON.parse(fs.readFileSync(process.env.SCAN_RESULT).toString())
 const rules: ReportingDescriptor[] = []
+const results: Result[] = [] 
 result.image.image_layers.forEach(l => {
   l.packages.forEach(p => {
     p.vulnerabilities.forEach(v => {
@@ -49,14 +50,7 @@ result.image.image_layers.forEach(l => {
           ...v.metadata.NVD,
         },
       })
-    })
-  })
-})
 
-const results: Result[] = [] 
-result.image.image_layers.forEach(l => {
-  l.packages.forEach(p => {
-    p.vulnerabilities.forEach(v => {
       results.push({
         ruleId: v.name,
         message: {
