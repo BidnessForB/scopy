@@ -1,7 +1,13 @@
-// import { compileFromFile } from 'json-schema-to-typescript'
 import * as fs from 'fs';
 import { Run, ReportingDescriptor, Result } from "../typings/sarif-schema"
 import { ImageInfo, ImageLayer, ImagePackage, ImagePackageVulnerability, ScanResult } from "./interfaces"
+
+
+// Test if input file var is set
+if (!process.env.SCAN_RESULT) {
+  throw new Error(`No scan result specified!  Must set SCAN_RESULT environment variable!`)
+}
+
 
 const buildRuleDescriptionMarkdown = (
   image: ImageInfo,
@@ -25,7 +31,8 @@ More details [here](${v.link}).
 `
 }
 
-const result: ScanResult = JSON.parse(fs.readFileSync('outputs/example.json').toString())
+
+const result: ScanResult = JSON.parse(fs.readFileSync(process.env.SCAN_RESULT).toString())
 const rules: ReportingDescriptor[] = []
 result.image.image_layers.forEach(l => {
   l.packages.forEach(p => {
@@ -77,6 +84,7 @@ result.image.image_layers.forEach(l => {
   })
 })
 
+// Build SARIF report object to be written
 let report: Run = {
   tool: {
     driver: {
@@ -90,6 +98,8 @@ let report: Run = {
   results,
 };
 
+
+// Write results
 const output = {
   $schema: "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
   version: "2.1.0",
@@ -97,8 +107,4 @@ const output = {
     report,
   ],
 }
-
-console.log(JSON.stringify(output, undefined, 2))
-// compile from file
-// compileFromFile('schemas/sarif-schema-2.1.0.json')
-  // .then(ts => fs.writeFileSync('sarif-schema.d.ts', ts))
+fs.writeFileSync(process.env.SARIF_REPORT || './report.sarif.json', JSON.stringify(output, undefined, 2))
