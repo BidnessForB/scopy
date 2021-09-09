@@ -3,16 +3,6 @@ import * as fs from 'fs';
 import { Run, ReportingDescriptor, Result } from "../typings/sarif-schema"
 import { ImageInfo, ImageLayer, ImagePackage, ImagePackageVulnerability, ScanResult } from "./interfaces"
 
-const buildRuleMarkdown = (v: ImagePackageVulnerability): string => {
-  return `
-**Severity**: ${v.severity}
-**CVSSv3 Score**: ${v.metadata.NVD.CVSSv3.Score}
-#### Description
-${v.description}
-
-More details [here](${v.link}).`
-}
-
 const buildRuleDescriptionMarkdown = (
   image: ImageInfo,
   layer: ImageLayer,
@@ -21,9 +11,16 @@ const buildRuleDescriptionMarkdown = (
   return `
 # ${v.name} found in package ${imgpackage.name}, image ${image.registry}/${image.repository}:${image.tags[0]}
 
+**Severity**: ${v.severity}
+**CVSSv3 Score**: ${v.metadata.NVD.CVSSv3.Score}
 **Image layer hash**: ${layer.hash}
 **Image creation command**: ${layer.created_by}
 **Package Name**: ${imgpackage.name}@${imgpackage.version}
+
+#### Description
+${v.description}
+
+More details [here](${v.link}).
 `
 }
 
@@ -37,11 +34,7 @@ result.image.image_layers.forEach(l => {
         helpUri: v.link,
         help: {
           text: v.description,
-          markdown: buildRuleMarkdown(v)
-        },
-        fullDescription: {
-          text: v.name,
-          markdown: buildRuleDescriptionMarkdown(result.image.image_info, l, p, v)
+          markdown: buildRuleDescriptionMarkdown(result.image.image_info, l, p, v),
         },
         properties: {
           "security-severity": `${v.metadata.NVD.CVSSv3.Score}`,
