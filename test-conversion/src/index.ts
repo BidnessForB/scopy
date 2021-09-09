@@ -21,16 +21,14 @@ vulns.forEach(v => {
     helpUri: v.link,
     help: {
       text: v.description,
-      markdown: `
-      # Overview
+      markdown: `# Overview
       **Severity**: ${v.severity}
       **Metadata**: ${v.metadata}
 
       #### Description
       ${v.description}
 
-      More details [here](${v.link}).
-      `
+      More details [here](${v.link}).`
     },
     shortDescription: {
       text: v.name,
