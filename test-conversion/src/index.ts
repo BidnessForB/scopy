@@ -39,7 +39,7 @@ result.image.image_layers.forEach(l => {
           text: v.description,
           markdown: buildRuleMarkdown(v)
         },
-        shortDescription: {
+        fullDescription: {
           text: v.name,
           markdown: buildRuleDescriptionMarkdown(result.image.image_info, l, p, v)
         },
