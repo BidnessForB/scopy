@@ -66,7 +66,7 @@ result.image.image_layers.forEach(l => {
           {
             physicalLocation: {
               artifactLocation: {
-                uri: layerData[0] ? layerData[0].location : 'Dockerfile'
+                uri: layerData[0] ? layerData[0].location.replace('\./', '') : 'Dockerfile'
               },
               region: {
                 startLine: locationDetails ? locationDetails.startLine : 1,
