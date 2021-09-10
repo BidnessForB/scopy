@@ -1,3 +1,6 @@
+#outputs
+report.sarif.json
+
 #Mac shit
 .DS_Store
 
