@@ -97,8 +97,8 @@
                 "region": {
                   "startLine": 1,
                   "endLine": 1,
-                  "startColumn": 0,
-                  "endColumn": 4
+                  "startColumn": 1,
+                  "endColumn": 5
                 }
               }
             }
@@ -121,8 +121,8 @@
                 "region": {
                   "startLine": 7,
                   "endLine": 7,
-                  "startColumn": 0,
-                  "endColumn": 3
+                  "startColumn": 1,
+                  "endColumn": 4
                 }
               }
             }
@@ -145,8 +145,8 @@
                 "region": {
                   "startLine": 11,
                   "endLine": 11,
-                  "startColumn": 0,
-                  "endColumn": 3
+                  "startColumn": 1,
+                  "endColumn": 4
                 }
               }
             }
