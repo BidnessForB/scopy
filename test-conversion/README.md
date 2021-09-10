@@ -8,10 +8,12 @@
 
 ## Parsing (generate report)
 
-`SCAN_RESULT="./xx.json" npm run parse`
+1. Set `SCAN_RESULT` environment variable to point to the lw-scanner output file to parse:
+`SCAN_RESULT="<path-to-lw-scanner-output.json"
+2. Run
+`npm run parse`
 
-Where `SCAN_RESULT` is the output from the vuln scanner. Optionally set `SARIF_OUTPUT` to specify the name/location the
-report file is written to.  Otherwise the output is written to `./report.sarif.json`
+Optionally set `SARIF_OUTPUT` to specify the name/location the report file is written to.  Otherwise the output is written to `./report.sarif.json`
 
 Other env vars:
 
@@ -19,4 +21,4 @@ Other env vars:
     var
 * `PROJECT_ROOT`: What is the base location that should be searched, relative to your source code, for docker file.
 
->Note: Currently only the first dockefile found results are processed.  TODO: Process all.
+>Note: Currently only the first dockerfile found is processed.  TODO: Process all.
