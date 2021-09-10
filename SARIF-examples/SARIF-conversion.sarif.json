@@ -95,8 +95,8 @@
                   "uri": "Dockerfile"
                 },
                 "region": {
-                  "startLine": 1,
-                  "endLine": 1,
+                  "startLine": 2,
+                  "endLine": 2,
                   "startColumn": 1,
                   "endColumn": 5
                 }
@@ -119,8 +119,8 @@
                   "uri": "Dockerfile"
                 },
                 "region": {
-                  "startLine": 7,
-                  "endLine": 7,
+                  "startLine": 8,
+                  "endLine": 8,
                   "startColumn": 1,
                   "endColumn": 4
                 }
@@ -143,8 +143,8 @@
                   "uri": "Dockerfile"
                 },
                 "region": {
-                  "startLine": 11,
-                  "endLine": 11,
+                  "startLine": 12,
+                  "endLine": 12,
                   "startColumn": 1,
                   "endColumn": 4
                 }

@@ -71,8 +71,8 @@ result.image.image_layers.forEach(l => {
               region: {
                 startLine: locationDetails ? locationDetails.startLine : 1,
                 endLine: locationDetails ? locationDetails.endLine : 1,
-                startColumn: locationDetails ? locationDetails.startColumn+1 : 1,
-                endColumn: locationDetails ? locationDetails.endColumn+1 : 2
+                startColumn: locationDetails ? locationDetails.startColumn : 1,
+                endColumn: locationDetails ? locationDetails.endColumn : 2
               }
             }
           }

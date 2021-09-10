@@ -42,12 +42,14 @@ export function searchLayerInstructions(
       const d = data.details[i]
       if (d.getTextContent().includes(command)) {
         const details = d.getInstructionRange()
+
+        // Note:When GH consumes this they count the offsets from 1, not 0 like this parser
         return {
           uri: data.location,
-          startLine: details.start.line,
-          startColumn: details.start.character,
-          endColumn: details.end.character,
-          endLine: details.end.line,
+          startLine: details.start.line+1,
+          startColumn: details.start.character+1,
+          endColumn: details.end.character+1,
+          endLine: details.end.line+1,
         }
       }
     }
