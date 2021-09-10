@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { Run, ReportingDescriptor, Result } from "../typings/sarif-schema"
 import { ImageInfo, ImageLayer, ImagePackage, ImagePackageVulnerability, ScanResult } from "./interfaces"
+import {gatherLayerData, searchLayerInstructions} from './parse';
 
 
 // Test if input file var is set
@@ -18,7 +19,7 @@ const buildRuleDescriptionMarkdown = (
 ${v.name} found in package ${imgpackage.name}
 
 **Severity**: ${v.severity}
-**CVSSv3 Score**: ${v.metadata.NVD.CVSSv3.Score}
+**CVSSv3 Score**: ${v.metadata?.NVD.CVSSv3.Score}
 **Image**: ${image.repository}:${image.tags[0]}
 **Image layer hash**: ${layer.hash}
 **Image creation command**: ${layer.created_by}
@@ -31,13 +32,15 @@ More details [here](${v.link}).
 `
 }
 
-
 const result: ScanResult = JSON.parse(fs.readFileSync(process.env.SCAN_RESULT).toString())
 const rules: ReportingDescriptor[] = []
 const results: Result[] = [] 
+const layerData = gatherLayerData(process.env.CUSTOM_DOCKERFILE_NAME, process.env.PROJECT_ROOT)
+
 result.image.image_layers.forEach(l => {
   l.packages.forEach(p => {
     p.vulnerabilities.forEach(v => {
+      const locationDetails = searchLayerInstructions(l.created_by, layerData[0])
       rules.push({
         id: v.name,
         helpUri: v.link,
@@ -46,8 +49,8 @@ result.image.image_layers.forEach(l => {
           markdown: buildRuleDescriptionMarkdown(result.image.image_info, l, p, v),
         },
         properties: {
-          "security-severity": `${v.metadata.NVD.CVSSv3.Score}`,
-          ...v.metadata.NVD,
+          "security-severity": `${v.metadata?.NVD?.CVSSv3?.Score}`,
+          ...v.metadata?.NVD,
         },
       })
 
@@ -63,12 +66,13 @@ result.image.image_layers.forEach(l => {
           {
             physicalLocation: {
               artifactLocation: {
-                uri: "Dockerfile"
+                uri: layerData[0] ? layerData[0].location.replace('\./', '') : 'Dockerfile'
               },
               region: {
-                startLine: 1,
-                startColumn: 1,
-                endColumn: 2
+                startLine: locationDetails ? locationDetails.startLine : 1,
+                endLine: locationDetails ? locationDetails.endLine : 1,
+                startColumn: locationDetails ? locationDetails.startColumn : 1,
+                endColumn: locationDetails ? locationDetails.endColumn : 2
               }
             }
           }

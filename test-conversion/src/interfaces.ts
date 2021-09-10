@@ -69,3 +69,12 @@ export interface ScanResult {
   image: Image
   scan_status: string
 }
+
+export interface LayerDetails {
+  uri: string
+  startLine: number
+  startColumn: number
+  endColumn: number
+  endLine: number
+}
+
