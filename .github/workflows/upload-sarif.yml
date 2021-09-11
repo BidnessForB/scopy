@@ -18,6 +18,7 @@ jobs:
       - name: Convert lw-scanner output
         run: | 
           export SCAN_RESULT=$(find . -type f -name 'evaluation*.json')
+          cd $GITHUB_WORKSPACE
           npm install
       - name: Checkout repository
         uses: actions/checkout@v2
