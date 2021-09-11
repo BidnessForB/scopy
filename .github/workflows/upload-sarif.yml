@@ -19,7 +19,6 @@ jobs:
         run: | 
           export SCAN_RESULT=$(find . -type f -name 'evaluation*.json')
           npm install
-          npm run parse
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Upload SARIF file
