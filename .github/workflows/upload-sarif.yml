@@ -17,7 +17,7 @@ jobs:
       # This step checks out a copy of your repository.
       - name: Convert lw-scanner output
         run: | 
-          set SCAN_RESULT=$(find . -type f -name 'evaluation*')
+          export SCAN_RESULT=$(find . -type f -name 'evaluation*.json')
           npm run parse
       - name: Checkout repository
         uses: actions/checkout@v2
