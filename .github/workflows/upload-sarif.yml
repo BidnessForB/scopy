@@ -21,6 +21,7 @@ jobs:
       - name: Convert lw-scanner output
         run: | 
           pwd
+          ls -al
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Upload SARIF file
