@@ -17,7 +17,18 @@ jobs:
       # This step checks out a copy of your repository.
       - name: Checkout repository
         uses: actions/checkout@v2
+      
+      - name: Download lw-scanner
+        run: |
+          sudo curl -LJO https://github.com/lacework/lacework-vulnerability-scanner/releases/download/v0.1.2/lw-scanner-linux-amd64
+          sudo mv lw-scanner-linux-amd64 lw-scanner
+          sudo chmod +x lw-scanner
 
+      - name: Scan image
+        run: | 
+          printf ".\ntrue\nfalse" | ./lw-scanner config data
+          ./lw-scanner evaluate bryancross test-image -t ${{ secrets.LW_ACCESS_TOKEN }} -n ${{ secrets.LW_ACCOUNT_NAME }} 
+      
       - name: Convert lw-scanner output
         run: | 
           export SCAN_RESULT=$(find . -type f -name 'evaluation*.json')
