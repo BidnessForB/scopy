@@ -10,7 +10,7 @@
 
 1. Set `SCAN_RESULT` environment variable to point to the lw-scanner output file to parse:
 
-`SCAN_RESULT="<path-to-lw-scanner-output.json"`
+`set SCAN_RESULT="<path-to-lw-scanner-output.json"`
 
 2. Run
 

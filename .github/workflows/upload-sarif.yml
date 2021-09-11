@@ -15,6 +15,10 @@ jobs:
        security-events: write
     steps:
       # This step checks out a copy of your repository.
+      - name: Convert lw-scanner output
+        run: | 
+          set SCAN_RESULT=$(find . -type f -name 'evaluation*')
+          npm run parse
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Upload SARIF file
@@ -23,4 +27,4 @@ jobs:
           # Path to SARIF file relative to the root of the repository
           # sarif_file: ./SARIF-examples/SARIF-minimal.sarif.json
           #sarif_file: ./SARIF-examples/SARIF-complete.sarif.json
-          sarif_file: ./SARIF-examples/SARIF-conversion.sarif.json
+          sarif_file: ./report.sarif.json
