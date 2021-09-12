@@ -1,6 +1,6 @@
 #outputs
 report.sarif.json
-
+bin
 #Mac shit
 .DS_Store
 
