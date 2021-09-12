@@ -24,4 +24,4 @@ jobs:
           # Path to SARIF file relative to the root of the repository
           # sarif_file: ./SARIF-examples/SARIF-minimal.sarif.json
           #sarif_file: ./SARIF-examples/SARIF-complete.sarif.json
-          sarif_file: ./lw-scanner-output/evaluation_1629773932.json
+          sarif_file: ./report.sarif.json
