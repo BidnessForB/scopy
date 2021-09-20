@@ -1,5 +1,5 @@
 import yargs from "yargs";
-import scanner from "sarif-testing";
+import scanner from "../src";
 
 const defaultOutput = './report.sarif.json'
 const options = yargs
