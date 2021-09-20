@@ -1,4 +1,4 @@
-name: "Upload SARIF"
+name: "Basic CI"
 
 # Run workflow each time code is pushed to your repository and on a schedule.
 # The scheduled workflow runs every Thursday at 15:45 UTC.
@@ -9,7 +9,7 @@ on:
       - '.github/workflows/**'
   pull_request:
     paths-ignore:
-    - '.github/workflows/**'
+      - '.github/workflows/**'
     branches:
       - main
   
@@ -17,11 +17,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-#    permissions:
-#       actions: read
-#       contents: read
-#       pull-requests: read
-#       security-events: write
     steps:
       # This step checks out a copy of your repository.
       - name: Checkout repository
