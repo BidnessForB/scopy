@@ -1,6 +1,11 @@
 #Mac shit
 .DS_Store
 
+
+#Sample data and output
+report.sarif.json
+
+
 #VSCode
 *.code-workspace
 
