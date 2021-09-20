@@ -2,12 +2,6 @@ name: LW Inline Scan
 # TODO: Leverage Terraform backend maintenance of state file (https://www.terraform.io/docs/language/settings/backends/s3.html)
 # Controls when the action will run. 
 on:
-   Call this workflow from any REST client: 
-  # POST https://api.github.com/repos/bidnessforb/lw-auto/dispatches
-  # Payload must include event_type:
-  # {"event_type":"scan"
-  # ,"client_payload":
-  #  {"Parameter1":"Could be anything!"}
   repository_dispatch:
     types: [scan]
   workflow_dispatch:
