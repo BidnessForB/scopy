@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  UploadSARIF:
     runs-on: ubuntu-latest
     permissions:
        actions: read

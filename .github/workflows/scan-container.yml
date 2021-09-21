@@ -21,7 +21,7 @@ jobs:
     steps:
 
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - name: Checkout 
+      - name: Checkout action code
         uses: actions/checkout@v2
 
       - name: Build transform action
@@ -58,7 +58,6 @@ jobs:
       - name: Check for vulnerabilities
         id: vuln-check
         run: | 
-          cat ./report.sarif.json
           export VULNS=$(jq .high_vulnerabilities $(find . -type f -name 'evaluation*'))
           echo ::set-output name=vulns::$VULNS
           echo VULNS
