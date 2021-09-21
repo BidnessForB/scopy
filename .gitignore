@@ -1,5 +1,6 @@
 #outputs
 bin
+evaluations
 
 #Mac shit
 .DS_Store
