@@ -1,0 +1,18 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+  "version": "2.1.0",
+  "runs": [
+    {
+      "tool": {
+        "driver": {
+          "version": "1.0",
+          "organization": "Lacework",
+          "name": "lacework-vuln-scanner",
+          "informationUri": "https://support.lacework.com/hc/en-us/articles/360035472393-Container-Vulnerability-Assessment-Overview",
+          "rules": []
+        }
+      },
+      "results": []
+    }
+  ]
+}
