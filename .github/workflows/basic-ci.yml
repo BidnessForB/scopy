@@ -1,0 +1,28 @@
+name: "Basic CI"
+
+# Run workflow each time code is pushed to your repository and on a schedule.
+# The scheduled workflow runs every Thursday at 15:45 UTC.
+on:
+  workflow_dispatch:
+  push:
+    paths-ignore:
+      - '.github/workflows/**'
+  pull_request:
+    paths-ignore:
+      - '.github/workflows/**'
+    branches:
+      - main
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      # This step checks out a copy of your repository.
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Build
+        run: | 
+          npm ci
+          npm run build
