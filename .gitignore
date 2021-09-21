@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 #outputs
 report.sarif.json
 bin
-=======
->>>>>>> 968cdd4af0d46be93373ac6aca041ac6b9fd1698
+
 #Mac shit
 .DS_Store
 
