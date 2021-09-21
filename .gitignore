@@ -1,5 +1,5 @@
 #outputs
-report.sarif.json
+#report.sarif.json
 bin
 
 #Mac shit
