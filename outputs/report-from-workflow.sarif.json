@@ -31151,6 +31151,4 @@
        ]
      }
    ]
- }::set-output name=vulns::25 2
- VULNS
- 25 2
+ }
