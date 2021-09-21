@@ -55,3 +55,27 @@ jobs:
           #sarif_file: ./SARIF-examples/SARIF-complete.sarif.json
           sarif_file: ./report.sarif.json
 
+      - name: Check for vulnerabilities
+        id: vuln-check
+        run: | 
+          export VULNS=$(jq .high_vulnerabilities $(find . -type f -name 'evaluation*'))
+          echo ::set-output name=vulns::$VULNS
+          echo VULNS
+          echo $VULNS
+
+      - name: Output results to workflow console
+        if: ${{ steps.vuln-check.outputs.vulns > 0 }}
+        run: | 
+          echo "Build failed, for this container is FILTHY AF"
+          echo "Details: " $VULNS " critical/high vulnerabilities detected."
+          #This seems to be the only way to get the JQ output pretty printed
+          jq -f message.jq $(find . -type f -name 'evaluation*') 
+
+      #Make this configurable
+      - name: Fail if high severity vulnerabilities found
+        if: ${{ steps.vuln-check.outputs.vulns > 0 }}
+        uses: actions/github-script@v3
+        with:
+          script: | 
+            core.setFailed("Critical/High vulnerabilities found!")          
+
