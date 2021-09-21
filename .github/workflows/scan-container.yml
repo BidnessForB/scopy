@@ -58,6 +58,7 @@ jobs:
       - name: Check for vulnerabilities
         id: vuln-check
         run: | 
+          cat ./report.sarif.json
           export VULNS=$(jq .high_vulnerabilities $(find . -type f -name 'evaluation*'))
           echo ::set-output name=vulns::$VULNS
           echo VULNS
