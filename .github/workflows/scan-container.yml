@@ -67,7 +67,7 @@ jobs:
       - name: Output results to workflow console
         if: ${{ steps.vuln-check.outputs.vulns > 0 }}
         run: | 
-          echo "Build failed, for this container is FILTHY AF"
+          echo "Build failed: Lacework found High Severity vulnerabilities"
           echo "Details: " $VULNS " critical/high vulnerabilities detected."
           #This seems to be the only way to get the JQ output pretty printed
           jq -f message.jq $(find . -type f -name 'evaluation*') 
