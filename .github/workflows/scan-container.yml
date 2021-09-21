@@ -18,6 +18,12 @@ jobs:
       - name: Checkout 
         uses: actions/checkout@v2
 
+      - name: Build action
+        run: | 
+        npm ci
+        npm run build
+
+
       - name: Build the latest Docker image
         run: docker build . -t bryancross:test-image
   
@@ -32,25 +38,15 @@ jobs:
           printf ".\ntrue\nfalse" | ./lw-scanner config data
           ./lw-scanner evaluate bryancross test-image -t ${{ secrets.LW_ACCESS_TOKEN }} -n ${{ secrets.LW_ACCOUNT_NAME }} 
 
-      - name: Check for vulnerabilities
-        id: vuln-check
+      - name: Transform results to SARIF
         run: | 
-          export VULNS=$(jq .high_vulnerabilities $(find . -type f -name 'evaluation*'))
-          echo ::set-output name=vulns::$VULNS
-          echo VULNS
-          echo $VULNS
+          npm run convert -- -s $(find . -type f -name 'evaluation*') 
 
-      - name: Output results
-        if: ${{ steps.vuln-check.outputs.vulns > 0 }}
-        run: | 
-          echo "Build failed, for this container is FILTHY AF"
-          echo "Details: " $VULNS " critical/high vulnerabilities detected."
-          #This seems to be the only way to get the JQ output pretty printed
-          jq -f message.jq $(find . -type f -name 'evaluation*') 
-
-      - name: Fail if broken
-        if: ${{ steps.vuln-check.outputs.vulns > 0 }}
-        uses: actions/github-script@v3
+      - name: Upload SARIF file
+        uses: github/codeql-action/upload-sarif@v1
         with:
-          script: | 
-            core.setFailed("Critical/High vulnerabilities found!")
+          # Path to SARIF file relative to the root of the repository
+          # sarif_file: ./SARIF-examples/SARIF-minimal.sarif.json
+          #sarif_file: ./SARIF-examples/SARIF-complete.sarif.json
+          sarif_file: ./report.sarif.json
+
