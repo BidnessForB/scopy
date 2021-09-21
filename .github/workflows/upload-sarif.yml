@@ -17,6 +17,8 @@ jobs:
       # This step checks out a copy of your repository.
       - name: Checkout repository
         uses: actions/checkout@v2
+
+      
       
       - name: Upload SARIF file
         uses: github/codeql-action/upload-sarif@v1
@@ -24,4 +26,5 @@ jobs:
           # Path to SARIF file relative to the root of the repository
           # sarif_file: ./SARIF-examples/SARIF-minimal.sarif.json
           #sarif_file: ./SARIF-examples/SARIF-complete.sarif.json
-          sarif_file: ./outputs/report.sarif.json
+          #sarif_file: ./outputs/report.sarif.json
+          sarif_file: ./report.sarif.json
