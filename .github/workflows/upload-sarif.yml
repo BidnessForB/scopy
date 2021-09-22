@@ -27,4 +27,4 @@ jobs:
           # sarif_file: ./SARIF-examples/SARIF-minimal.sarif.json
           #sarif_file: ./SARIF-examples/SARIF-complete.sarif.json
           #sarif_file: ./outputs/report.sarif.json
-          sarif_file: ./outputs/report.sarif.json
+          sarif_file: ./outputs/report-from-good-container.sarif.json
