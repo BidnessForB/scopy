@@ -4,6 +4,11 @@ name: "Upload SARIF"
 # The scheduled workflow runs every Thursday at 15:45 UTC.
 on:
   workflow_dispatch:
+    inputs:
+      filename:
+        description: 'File to upload'
+        required: true
+        default: './outputs/report.sarif.json'
 
 jobs:
   UploadSARIF:
@@ -27,4 +32,4 @@ jobs:
           # sarif_file: ./SARIF-examples/SARIF-minimal.sarif.json
           #sarif_file: ./SARIF-examples/SARIF-complete.sarif.json
           #sarif_file: ./outputs/report.sarif.json
-          sarif_file: ./outputs/report.sarif.json
+          sarif_file: ${{ github.event.inputs.filename }}
