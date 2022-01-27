@@ -1,5 +1,7 @@
 ## Setup
 
+[![Git](https://app.soluble.cloud/api/v1/public/badges/6464436a-74de-4d9e-b3a3-1a4c4bbdb60d.svg?orgId=547292756607)](https://app.soluble.cloud/repos/details/github.com/bidnessforb/scopy?orgId=547292756607)  
+
 `npm ci`
 
 ## Building
